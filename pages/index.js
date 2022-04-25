@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import factory from '../ethereum/factory';
 
 class CampaignIndex extends Component {
