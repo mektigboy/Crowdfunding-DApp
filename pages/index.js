@@ -10,11 +10,11 @@ class CampaignIndex extends Component {
   }
 
   renderCampaigns() {
-    const items = this.props.campaigns.map(address => {
+    const items = this.props.campaigns.map((address) => {
       return {
         header: address,
         description: <a>View Campaign</a>,
-        fluid: true
+        fluid: true,
       };
     });
 
@@ -22,7 +22,15 @@ class CampaignIndex extends Component {
   }
 
   render() {
-    return <div>{this.renderCampaigns()}</div>;
+    return (
+      <div>
+        <link
+          rel='stylesheet'
+          href='//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css'
+        ></link>
+        {this.renderCampaigns()}
+      </div>
+    );
   }
 }
 
