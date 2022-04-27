@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Form, Button, Input } from 'semantic-ui-react';
 import Layout from '../../components/Layout';
 import factory from '../../ethereum/factory';
+import web3 from '../../ethereum/web3';
 
 class CampaignNew extends Component {
   state = {
@@ -11,11 +12,13 @@ class CampaignNew extends Component {
   onSubmit = async (event) => {
     event.preventDefault();
 
+    const accounts = await web3.eth.getAccounts();
+
     await factory.methods
       .createCampaign(this.state.minimumContribution)
       .send({
-
-      }); // MetaMask will take care of gas calcultation.
+        from: accounts[0]
+      }); // MetaMask will take care of gas calcultations.
   };
 
   render() {
