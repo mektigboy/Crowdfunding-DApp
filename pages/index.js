@@ -16,7 +16,7 @@ class CampaignIndex extends Component {
         header: address,
         description: <a>View campaign</a>,
         fluid: true,
-        style: {margin: '0px'}
+        style: {margin: '0px 0px 10px 0px'}
       });
     });
 
