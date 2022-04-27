@@ -1,17 +1,28 @@
 import React, { Component } from 'react';
 import { Form, Button, Input } from 'semantic-ui-react';
 import Layout from '../../components/Layout';
+import factory from '../../ethereum/factory';
 
 class CampaignNew extends Component {
   state = {
     minimumContribution: '',
   };
 
+  onSubmit = async (event) => {
+    event.preventDefault();
+
+    await factory.methods
+      .createCampaign(this.state.minimumContribution)
+      .send({
+
+      }); // MetaMask will take care of gas calcultation.
+  };
+
   render() {
     return (
       <Layout>
         <h3>Create a Campaign</h3>
-        <Form>
+        <Form onSubmit={this.onSubmit}>
           <Form.Field>
             <label>Minimum contribution</label>
             <Input
