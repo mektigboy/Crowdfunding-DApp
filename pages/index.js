@@ -12,30 +12,32 @@ class CampaignIndex extends Component {
 
   renderCampaigns() {
     const items = this.props.campaigns.map((address) => {
-      return {
+      return ({
         header: address,
-        description: <a>View Campaign</a>,
+        description: <a>View campaign</a>,
         fluid: true,
-      };
+        style: {margin: '0px'}
+      });
     });
 
-    return <Card.Group items={items} />;
+    return (
+      <Card.Group items={items} style={{ margin: '0px' }}/>
+    );
   }
 
   render() {
     return (
       <Layout>
-        <div>
-          <h3>Open Campaigns</h3>
-          <Button
-            floated="right"
-            content='Create Campaign'
-            icon='add circle'
-            primary
-            labelPosition='left'
-          />
-          {this.renderCampaigns()}
-        </div>
+        <h3>Open Campaigns</h3>
+        <Button
+          floated='right'
+          content='Create Campaign'
+          icon='add circle'
+          primary
+          labelPosition='left'
+          style={{ marginLeft: '10px' }}
+        />
+        {this.renderCampaigns()}
       </Layout>
     );
   }

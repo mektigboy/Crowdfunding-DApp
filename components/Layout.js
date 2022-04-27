@@ -11,6 +11,9 @@ export default props => {
           rel='stylesheet'
           href='//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css'
         ></link>
+        <style>
+          
+        </style>
       </Head>
       <Header />
       {props.children}
