@@ -77,13 +77,7 @@ contract Campaign {
         request.recipient.transfer(request.value);
         request.complete = true;
     }
-    function getSummary() public view returns(
-      uint minimumContribution,
-      uint this.balance,
-      uint requests.length,
-      uint approversCount,
-      address manager
-      ) {
+    function getSummary() public view returns(uint, uint, uint, uint approversCount, address manager) {
         return (
           minimumContribution,
           this.balance,
@@ -93,6 +87,6 @@ contract Campaign {
         );
     }
     function getRequestCount() public view returns (uint) {
-      return requests.length
+      return requests.length;
     }
 }
