@@ -17,7 +17,7 @@ class CampaignIndex extends Component {
         header: address,
         description: <Link route={`/campaigns/${address}`}><a>View campaign</a></Link>,
         fluid: true,
-        style: { margin: '0px 0px 10px 0px' }
+        style: { margin: '0px 0px 10px 0px' } // Optional, original margins we annoying me.
       });
     });
 
@@ -34,7 +34,7 @@ class CampaignIndex extends Component {
           <a>
             <Button
               floated='right'
-              content='Create Campaign'
+              content='Create campaign'
               icon='add circle'
               primary
               labelPosition='left'
