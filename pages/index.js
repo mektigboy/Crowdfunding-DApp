@@ -17,7 +17,7 @@ class CampaignIndex extends Component {
         header: address,
         description: <Link route={`/campaigns/${address}`}><a>View campaign</a></Link>,
         fluid: true,
-        style: { margin: '0px 0px 10px 0px' } // Optional, original margins we annoying me.
+        style: { margin: '0em 0em .875em 0em' } // Optional, original margins we annoying me.
       });
     });
 
