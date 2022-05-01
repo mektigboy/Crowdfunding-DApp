@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Card } from 'semantic-ui-react';
 import Layout from '../../components/Layout';
 import Campaign from '../../ethereum/campaign';
 
@@ -16,10 +17,31 @@ class CampaignShow extends Component {
     };
   }
 
+  renderCards() {
+    const {
+      balance,
+      manager,
+      minimumContribution,
+      requestCount,
+      approversCount
+    } = this.props;
+    const items = [
+      {
+        header: manager,
+        meta: 'Address of manager',
+        description: 'The manager created this campaign and can request to withdraw money.',
+        style: { overflowWrap: 'break-word' }
+      }
+    ];
+
+    return <Card.Group items={items} />
+  }
+
   render() {
     return(
       <Layout>
         <h3>Campaign Details</h3>
+        {this.renderCards()}
       </Layout>
     );
   }
