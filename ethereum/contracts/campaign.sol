@@ -77,7 +77,7 @@ contract Campaign {
         request.recipient.transfer(request.value);
         request.complete = true;
     }
-    function getSummary() public view returns(uint, uint, uint, uint approversCount, address manager) {
+    function getSummary() public view returns(uint, uint, uint, uint, address) {
         return (
           minimumContribution,
           this.balance,

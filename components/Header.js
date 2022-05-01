@@ -2,7 +2,7 @@ import React from 'react';
 import { Menu } from 'semantic-ui-react';
 import { Link } from '../routes';
 
-export default () => {
+const Header = () => {
   return (
     <Menu style={{ marginTop: '10px' }}>
       <Link route='/'><a className='item'>Crowdfunding</a></Link>
@@ -12,4 +12,6 @@ export default () => {
       </Menu.Menu>
     </Menu>
   );
-};
+}
+
+export default Header;
