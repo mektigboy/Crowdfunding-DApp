@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import { Form, Input, Message } from 'semantic-ui-react';
+import { Form, Input, Message, Button } from 'semantic-ui-react';
 
 class ContributeForm extends Component {
   render() {
-    render (
+    return (
       <Form>
         <Form.Field>
           <label>Amount to contribute</label>
@@ -16,7 +16,7 @@ class ContributeForm extends Component {
           Contribute
         </Button>
       </Form>
-    )
+    );
   }
 }
 
