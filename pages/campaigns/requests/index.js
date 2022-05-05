@@ -12,6 +12,7 @@ class RequestIndex extends Component {
   render() {
     return (
       <Layout>
+        <h3>Requests</h3> 
         <Link route={`/campaigns/${this.props.address}/requests/new`}>
           <a>
             <Button primary>Add request</Button>
