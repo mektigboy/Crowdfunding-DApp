@@ -43,7 +43,7 @@ class ContributeForm extends Component {
           <Input
             value={this.state.value}
             onChange={event => this.setState({ value: event.target.value })}
-            label='ether'
+            label='ETH'
             labelPosition='right'
           />
         </Form.Field>
