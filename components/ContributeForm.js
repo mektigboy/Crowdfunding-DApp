@@ -42,14 +42,14 @@ class ContributeForm extends Component {
           <label>Amount to contribute</label>
           <Input
             value={this.state.value}
-            onChange={event => this.setState({ value: event.target.value })}
+            onChange={(event) => this.setState({ value: event.target.value })}
             label='ETH'
             labelPosition='right'
           />
         </Form.Field>
 
         <Message error header='Oops!' content={this.state.errorMessage} />
-        <Button loading={this.state.loading} primary>
+        <Button primary loading={this.state.loading}>
           Contribute
         </Button>
       </Form>

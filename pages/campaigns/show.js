@@ -75,7 +75,7 @@ class CampaignShow extends Component {
               {this.renderCards()}
             </Grid.Column>
             <Grid.Column width={6}>
-              <ContributeForm address={this.props.address}/>
+              <ContributeForm address={this.props.address} />
             </Grid.Column>
           </Grid.Row>
             <Grid.Column>

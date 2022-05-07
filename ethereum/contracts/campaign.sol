@@ -46,7 +46,7 @@ contract Campaign {
 
         approvers[msg.sender] = true;
 
-        approversCount ++;
+        approversCount++;
     }
     function createRequest(string description, uint value, address recipient) public restricted {
         Request memory newRequest = Request({
